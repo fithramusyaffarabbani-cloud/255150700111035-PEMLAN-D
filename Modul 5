@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class hargaJaket {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        final int HARGA_A = 100000;
+        final int HARGA_B = 125000;
+        final int HARGA_C = 175000;
+        
+        System.out.print("Masukkan jumlah Jaket A: ");
+        int jumlahA = input.nextInt();
+
+        System.out.print("Masukkan jumlah Jaket B: ");
+        int jumlahB = input.nextInt();
+
+        System.out.print("Masukkan jumlah Jaket C: ");
+        int jumlahC = input.nextInt();
+       
+        int totalA;
+        if (jumlahA > 100) {
+            totalA = jumlahA * 95000; // diskon
+        } else {
+            totalA = jumlahA * HARGA_A;
+        }
+
+        int totalB;
+        if (jumlahB > 100) {
+            totalB = jumlahB * 120000; // diskon
+        } else {
+            totalB = jumlahB * HARGA_B;
+        }
+
+        int totalC;
+        if (jumlahC > 100) {
+            totalC = jumlahC * 160000; // diskon
+        } else {
+            totalC = jumlahC * HARGA_C;
+        }
+        
+        int totalHarga = totalA + totalB + totalC;
+
+        System.out.println("\n--- Rincian Harga ---");
+        System.out.println("Total Jaket A: Rp " + totalA);
+        System.out.println("Total Jaket B: Rp " + totalB);
+        System.out.println("Total Jaket C: Rp " + totalC);
+        System.out.println("Total Harga Keseluruhan: Rp " + totalHarga);
+    }
+}
